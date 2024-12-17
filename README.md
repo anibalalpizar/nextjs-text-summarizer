@@ -1,36 +1,108 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Text Summarization Tool
+
+## Description
+
+This project is a web-based Text Summarization Tool built with Next.js and React. It allows users to input text (up to 300 words) and generates a concise summary using AI-powered summarization techniques.
+
+## Features
+
+- User-friendly interface for text input
+- Character limit of 300 words for input text
+- AI-powered text summarization using Hugging Face models
+- Responsive design using Tailwind CSS and shadcn/ui components
+- Loading indicators for better user experience
+- Error handling for failed summarization attempts
+- Server Actions for secure API calls
+
+## Technologies Used
+
+- Next.js
+- React
+- TypeScript
+- Tailwind CSS
+- shadcn/ui components
+- Hugging Face Transformers
 
 ## Getting Started
 
-First, run the development server:
+### Prerequisites
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+- Node.js (v22.11.0 or higher)
+- npm or yarn
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### Installation
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+1. Clone the repository:
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+   ```
+   git clone hhttps://github.com/anibalalpizar/nextjs-text-summarizer.git
+   ```
 
-## Learn More
+2. Navigate to the project directory:
 
-To learn more about Next.js, take a look at the following resources:
+   ```
+   cd nextjs-text-summarizer
+   ```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+3. Install dependencies:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+   ```
+   npm install
+   ```
 
-## Deploy on Vercel
+   or
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+   ```
+   yarn install
+   ```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+4. Create a `.env` file in the root directory and add the following environment variables:
+   ```
+   HUGGINGFACE_API_KEY=your_huggingface_api_key_here
+   MODEL_NAME=facebook/bart-large-cnn
+   MAX_LENGTH=300
+   ```
+
+### Running the Application
+
+1. Start the development server:
+
+   ```
+   npm run dev
+   ```
+
+   or
+
+   ```
+   yarn dev
+   ```
+
+2. Open your browser and navigate to `http://localhost:3000`
+
+## Usage
+
+1. Enter or paste your text into the input area (max 300 words).
+2. Click the Summarize button to generate a summary.
+3. Wait for the summary to be generated.
+4. View the generated summary below the input area.
+5. Use the reset button to clear the input area and generated summary.
+
+## Server Actions
+
+This project uses Next.js Server Actions for secure API calls to the Hugging Face API. The summarization logic is implemented in a server action file, which should be located in the `src/actions` directory. This approach ensures that the API key is kept secure on the server-side.
+
+## Contributing
+
+Contributions are welcome! Please feel free to submit a Pull Request.
+
+## License
+
+This project is licensed under the MIT License.
+
+## Acknowledgements
+
+- [Next.js](https://nextjs.org/)
+- [React](https://reactjs.org/)
+- [Tailwind CSS](https://tailwindcss.com/)
+- [shadcn/ui](https://ui.shadcn.com/)
+- [Hugging Face](https://huggingface.co/)
