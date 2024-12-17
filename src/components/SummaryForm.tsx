@@ -65,7 +65,7 @@ function SummaryForm() {
                   Making summary...
                 </>
               ) : (
-                "Resumir"
+                "Summarize"
               )}
             </Button>
             <Button
