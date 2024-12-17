@@ -47,7 +47,7 @@ function SummaryForm() {
         <form onSubmit={handleSubmit} className="space-y-4">
           <CharacterLimitedTextarea
             maxChars={maxChars}
-            placeholder="Ingresa el texto a resumir (máximo 300 palabras)"
+            placeholder="Enter text to summarize(max 300 characters)"
             name="text"
             id="text"
             value={text}
